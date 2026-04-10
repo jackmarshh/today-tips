@@ -1,8 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #f0fdf4;
-  --color-primary-100: #dcfce7;
-  --color-primary-500: #22c55e;
-  --color-primary-600: #16a34a;
+  --font-display: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC",
+    "Microsoft YaHei", sans-serif;
+  --color-primary-50: #fff7ef;
+  --color-primary-100: #f8ecdc;
+  --color-primary-200: #ecd4ba;
+  --color-primary-500: #b86b3d;
+  --color-primary-700: #724329;
+  --color-ink-900: #2f241f;
+  --color-ink-700: #5f544d;
+  --color-surface: #fffdf9;
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(245, 207, 161, 0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(250, 226, 189, 0.28), transparent 34%),
+    linear-gradient(180deg, #fffaf4 0%, #f8f1e7 56%, #f6efe8 100%);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink-900);
+  background: transparent;
+}
+
+::selection {
+  background: rgba(184, 107, 61, 0.18);
+}
+
+.paper-surface {
+  background:
+    linear-gradient(180deg, rgba(255, 251, 246, 0.98), rgba(255, 249, 241, 0.94)),
+    rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 24px 70px rgba(125, 98, 76, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(184, 107, 61, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 107, 61, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
